@@ -67,41 +67,76 @@ function crystalValues(arr){
     $("#button-1").on("click", function() {
         totalScore += c1;
         $("#points").html("Crystal points: " + totalScore);
-    });
-    $("#button-2").on("click", function() {
-        totalScore += c2;
-        $("#points").html("Crystal points: " + totalScore);
-
-    });
-    $("#button-3").on("click", function() {
-        totalScore += c3;
-        $("#points").html("Crystal points: " + totalScore);
-    });
-
-    $("#button-4").on("click", function(){
-        totalScore += c4;
-        $("#points").html("Crystal points: " + totalScore);
-    });
-    $("#button").on("click", function() {
         if(totalScore === randNumber){
             wins++;
             console.log(totalScore);
             $("#points").html(totalScore);
-            $("#wins").html("wins:" + wins);
+            $("#wins").text(`wins: ${wins}`);
             setTimeout(function() {gameReset("Winner!")}, 20);
         }
         else if (totalScore > randNumber){
             losses++
             $("#points").html(totalScore);
-            $("#losses").html("Losses:" + losses);
+            $("#losses").text(`Losses:${losses}`);
             setTimeout(function() {gameReset("Sadness....")}, 20);
         }
-    
-    
-    })
-    
-    
+             
+    });
+    $("#button-2").on("click", function() {
+        totalScore += c2;
+        $("#points").html("Crystal points: " + totalScore);
+        if(totalScore === randNumber){
+            wins++;
+            console.log(totalScore);
+            $("#points").html(totalScore);
+            $("#wins").text(`wins: ${wins}`);
+            setTimeout(function() {gameReset("Winner!")}, 20);
+        }
+        else if (totalScore > randNumber){
+            losses++
+            $("#points").html(totalScore);
+            $("#losses").text(`Losses:${losses}`);
+            setTimeout(function() {gameReset("Sadness....")}, 20);
+        }
+    });
+    $("#button-3").on("click", function() {
+        totalScore += c3;
+        $("#points").html("Crystal points: " + totalScore);
+        if(totalScore === randNumber){
+            wins++;
+            console.log(totalScore);
+            $("#points").html(totalScore);
+            $("#wins").text(`wins: ${wins}`);
+            setTimeout(function() {gameReset("Winner!")}, 20);
+        }
+        else if (totalScore > randNumber){
+            losses++
+            $("#points").html(totalScore);
+            $("#losses").text(`Losses:${losses}`);
+            setTimeout(function() {gameReset("Sadness....")}, 20);
+        }
+    });
 
+    $("#button-4").on("click", function(){
+        totalScore += c4;
+        $("#points").html("Crystal points: " + totalScore);
+        if(totalScore === randNumber){
+            wins++;
+            console.log(totalScore);
+            $("#points").html(totalScore);
+            $("#wins").text(`wins: ${wins}`);
+            setTimeout(function() {gameReset("Winner!")}, 20);
+        }
+        else if (totalScore > randNumber){
+            losses++
+            $("#points").html(totalScore);
+            $("#losses").text(`Losses:${losses}`);
+            setTimeout(function() {gameReset("Sadness....")}, 20);
+        }
+    });
+ 
+    
+    
 
 
 
@@ -111,3 +146,4 @@ function crystalValues(arr){
 
 
 });
+
